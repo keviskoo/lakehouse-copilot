@@ -1,0 +1,36 @@
+[project]
+name = "lakehouse-copilot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kevin Fonseca", email = "kevindonadio@hotmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic>=2.9.0",
+    "databricks-sdk>=0.167.0",
+    "databricks-sql-connector>=4.9.0",
+    "duckdb>=2.0.0",
+    "httpx>=0.28.1",
+    "mcp>=2.3.0",
+    "polars>=2.1.0",
+    "pydantic>=2.14.3",
+    "pyspark>=4.3.0",
+    "sqlglot>=30.32.0",
+]
+
+[project.scripts]
+lakehouse-copilot = "lakehouse_copilot:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
